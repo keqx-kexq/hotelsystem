@@ -1,0 +1,24 @@
+﻿<Window x:Class="HotelSystem.ManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Система управления отелем" Height="600" Width="800">
+    <Grid Margin="10">
+        <TabControl>
+            <TabItem Header="Гости">
+                <Frame Name="GuestsFrame" NavigationUIVisibility="Hidden" />
+            </TabItem>
+
+            <TabItem Header="Бронирования">
+                <Frame Name="BookingsFrame" NavigationUIVisibility="Hidden" />
+            </TabItem>
+
+            <TabItem Header="номерной фонд">
+                <Frame Name="RoomsFrame" NavigationUIVisibility="Hidden" />
+            </TabItem>
+
+            <TabItem Header="Управление клинингом">
+                <Frame Name="CleaningManagementFrame" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

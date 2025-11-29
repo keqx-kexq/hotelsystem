@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BookingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CleaningManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CleaningStaffScheduleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreateBookingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GuestsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManagerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RoomsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

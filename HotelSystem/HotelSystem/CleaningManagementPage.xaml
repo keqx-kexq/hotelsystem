@@ -1,0 +1,48 @@
+﻿<Page x:Class="HotelSystem.CleaningManagementPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Управление клинингом"
+      Background="White">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <Label Content="Сотрудник:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="CleaningOfficerComboBox" Width="200" Margin="10,0,20,0"
+                      DisplayMemberPath="FullName" SelectedValuePath="Id"/>
+
+            <Label Content="Комната:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="RoomComboBox" Width="200" Margin="10,0,0,0"
+                      DisplayMemberPath="Number" SelectedValuePath="id"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Label Content="Дата уборки:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="CleaningDatePicker" Width="200" Margin="10,0,20,0"/>
+
+            <Button x:Name="AssignButton" Content="Назначить уборку" Margin="10,0,0,0" Width="150"
+                    Click="AssignButton_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="CleaningScheduleGrid" Grid.Row="2" 
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата уборки" Binding="{Binding cleaning_date, StringFormat=\{0:dd.MM.yyyy\}}" Width="150"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding RoomNumber}" Width="100"/>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding UserFullName}" Width="200"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
